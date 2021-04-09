@@ -5,7 +5,7 @@ var hideQuestion = document.querySelector(".questiontext")
 var correct = document.querySelector(".win");
 var incorrect = document.querySelector(".lose");
 var timerElement = document.querySelector(".timer-count");
-
+var timeLeft = 10
 
 
 
@@ -15,9 +15,9 @@ startButton.addEventListener("click", function() {
   } else {
     hideQuestion.style.display, question1El.style.display = "none";
   }
-  timeLeft = 10
 
-  function startQuiz() {
+  var timeLeft = 10
+  
     var timeInterval = setInterval(function () {
     timeLeft--;
     timerElement.textContent = timeLeft;
@@ -28,8 +28,7 @@ startButton.addEventListener("click", function() {
       displayMessage ();
     }
     }, 1000);
-};
-
+});
 
 function displayMessage() {
   timerElement.textContent = "Your time has run out";
@@ -83,4 +82,3 @@ function resetGame() {
 }
 // Attaches event listener to button
 resetButton.addEventListener("click", resetGame);
-});
