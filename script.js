@@ -1,22 +1,35 @@
 var startButton = document.querySelector(".start-button");
+var startQuizText = document.querySelector(".startQuiz")
 var question1El = document.querySelector(".question1");
-var win = document.querySelector(".win");
-var lose = document.querySelector(".lose");
+var hideQuestion = document.querySelector(".questiontext")
+var correct = document.querySelector(".win");
+var incorrect = document.querySelector(".lose");
 var timerElement = document.querySelector(".timer-count");
 
-var timer;
-var timerCount;
 
-function startTimer() {
-  var timeInterval = setInterval(function () {
-  timeLeft--;
-  timerElement.textContent = timeLeft;
-  if (timeLeft === 0) {
-    clearInterval(timeInterval);
-    displayMessage ();
+
+
+startButton.addEventListener("click", function() {
+  if (hideQuestion.style.display, question1El.style.display === "none") {
+    hideQuestion.style.display, question1El.style.display = "block";
+  } else {
+    hideQuestion.style.display, question1El.style.display = "none";
   }
-  }, 1000);
-}
+  timeLeft = 10
+
+  function startQuiz() {
+    var timeInterval = setInterval(function () {
+    timeLeft--;
+    timerElement.textContent = timeLeft;
+    if (timeLeft >=0) {
+    }
+    if (timeLeft === 0) {
+      clearInterval(timeInterval);
+      displayMessage ();
+    }
+    }, 1000);
+};
+
 
 function displayMessage() {
   timerElement.textContent = "Your time has run out";
@@ -25,42 +38,19 @@ function displayMessage() {
 
 
 
-startButton.addEventListener("click", startTimer);
-
-// The setTimer function starts and stops the timer and triggers winGame() and loseGame()
-function startTimer() {
-  // Sets timer
-  timer = setInterval(function() {
-    timerCount--;
-    timerElement.textContent = timerCount;
-    if (timerCount >= 0) {
-      // Tests if win condition is met
-      if (isWin && timerCount > 0) {
-        // Clears interval and stops timer
-        clearInterval(timer);
-        winGame();
-      }
-    }
-    // Tests if time has run out
-    if (timerCount === 0) {
-      // Clears interval
-      clearInterval(timer);
-      loseGame();
-    }
-  }, 1000);
-}
+startButton.addEventListener("click", timerElement);
 
 
 
 
 // Updates win count on screen and sets win count to client storage
-function setWins() {
+function correct() {
   win.textContent = winCounter;
   localStorage.setItem("winCount", winCounter);
 }
 
 // Updates lose count on screen and sets lose count to client storage
-function setLosses() {
+function incorrect() {
   lose.textContent = loseCounter;
   localStorage.setItem("loseCount", loseCounter);
 }
@@ -93,3 +83,4 @@ function resetGame() {
 }
 // Attaches event listener to button
 resetButton.addEventListener("click", resetGame);
+});

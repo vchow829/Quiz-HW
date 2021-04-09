@@ -84,3 +84,11 @@ select {
 .questiontext {
   text-align: center;
 }
+
+.startquiz {
+  text-align: center;
+}
+
+.question1 {
+  display: none;
+}
