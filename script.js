@@ -1,11 +1,16 @@
 var startButton = document.querySelector(".start-button");
 var startQuizText = document.querySelector(".startQuiz")
 var question1El = document.querySelector(".question1");
+var question2El = document.querySelector(".question2");
+var question3El = document.querySelector(".question3");
+var question4El = document.querySelector(".question4");
+
 var hideQuestion = document.querySelector(".questiontext")
-var correct = document.querySelector(".win");
-var incorrect = document.querySelector(".lose");
+var squareBracket = document.querySelector(".squareB")
+var correct = document.querySelector(".correct");
+var incorrect = document.querySelector(".incorrect");
 var timerElement = document.querySelector(".timer-count");
-var timeLeft = 10
+
 
 
 
@@ -28,18 +33,96 @@ startButton.addEventListener("click", function() {
       displayMessage ();
     }
     }, 1000);
-});
 
 function displayMessage() {
   timerElement.textContent = "Your time has run out";
-}
+  }
+});
 
+startButton.addEventListener("click", function() {
+  if (hideQuestion.style.display, question2El.style.display === "none") {
+    hideQuestion.style.display, question2El.style.display = "block";
+  } else {
+    hideQuestion.style.display, question2El.style.display = "none";
+  }
 
+  var timeLeft = 10
+  
+    var timeInterval = setInterval(function () {
+    timeLeft--;
+    timerElement.textContent = timeLeft;
+    if (timeLeft >=0) {
+    }
+    if (timeLeft === 0) {
+      clearInterval(timeInterval);
+      displayMessage ();
+    }
+    }, 1000);
 
+function displayMessage() {
+  timerElement.textContent = "Your time has run out";
+  }
+});
 
-startButton.addEventListener("click", timerElement);
+startButton.addEventListener("click", function() {
+  if (hideQuestion.style.display, question3El.style.display === "none") {
+    hideQuestion.style.display, question3El.style.display = "block";
+  } else {
+    hideQuestion.style.display, question3El.style.display = "none";
+  }
 
+  var timeLeft = 10
+  
+    var timeInterval = setInterval(function () {
+    timeLeft--;
+    timerElement.textContent = timeLeft;
+    if (timeLeft >=0) {
+    }
+    if (timeLeft === 0) {
+      clearInterval(timeInterval);
+      displayMessage ();
+    }
+    }, 1000);
 
+function displayMessage() {
+  timerElement.textContent = "Your time has run out";
+  }
+});
+
+startButton.addEventListener("click", function() {
+  if (hideQuestion.style.display, question4El.style.display === "none") {
+    hideQuestion.style.display, question4El.style.display = "block";
+  } else {
+    hideQuestion.style.display, question4El.style.display = "none";
+  }
+
+  var timeLeft = 10
+  
+    var timeInterval = setInterval(function () {
+    timeLeft--;
+    timerElement.textContent = timeLeft;
+    if (timeLeft >=0) {
+    }
+    if (timeLeft === 0) {
+      clearInterval(timeInterval);
+      displayMessage ();
+    }
+    }, 1000);
+
+function displayMessage() {
+  timerElement.textContent = "Your time has run out";
+  }
+});
+
+var correct = document.querySelector(".correct");
+var correctAns = 0
+var incorrectAns = 0
+
+squareBracket.addEventListener("click", function() {
+  if (squareBracket === true) {
+    correct.innerHTML = correctAns++;
+  } else {incorrectAns++};
+});
 
 
 // Updates win count on screen and sets win count to client storage
@@ -82,3 +165,4 @@ function resetGame() {
 }
 // Attaches event listener to button
 resetButton.addEventListener("click", resetGame);
+

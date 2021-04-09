@@ -13,14 +13,62 @@
 
     <main>
       <section>
-        <h1 class="startquiz">Click Start to Begin the Quiz</h1>
+        <h1 class="startquiz">Double Click Start to Begin the Quiz</h1>
         <div class="quizqs">
           <div class="question1">
             <h2 class="questiontext">How is an array signified?</h2>
             <button>A. Parenthesis ()</button>
             <button>B. Curly Brackets {}</button>
-            <button>C. Square Brackets []</button>
+            <button class="squareB">C. Square Brackets []</button>
             <button>D. Quotation Marks ""</button>
+            <div class = "timer-text"></div>
+            
+            <div class="timer-count">10</div>
+            <h3>seconds remaining</h3>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="quizqs">
+          <div class="question2">
+            <h2 class="questiontext">What does CSS stand for?</h2>
+            <button class="cssAns">A. Cascading Style Sheet </button>
+            <button>B. Current Style Sheet </button>
+            <button>C. Counter Sort System</button>
+            <button>D. Core Style Sufficiency</button>
+            <div class = "timer-text"></div>
+            
+            <div class="timer-count">10</div>
+            <h3>seconds remaining</h3>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="quizqs">
+          <div class="question3">
+            <h2 class="questiontext">What are acceptable ways to specify the color of an element</h2>
+            <button>A. By using the name of a color</button>
+            <button>B. Using RGB color codes</button>
+            <button>C. Using hex color codes </button>
+            <button class=allAns>D. All of the above</button>
+            <div class = "timer-text"></div>
+            
+            <div class="timer-count">10</div>
+            <h3>seconds remaining</h3>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="quizqs">
+          <div class="question4">
+            <h2 class="questiontext">In web development, what does traverse mean?</h2>
+            <button class="traverseAns">A. Navigating through a document object model or DOM</button>
+            <button>B. To scroll to the bottom of your code</button>
+            <button>C. To view past versions of the current code</button>
+            <button>D. It's a vehicle built by Chevrolet</button>
             <div class = "timer-text"></div>
             
             <div class="timer-count">10</div>
@@ -33,8 +81,8 @@
         <div class="card results">
           <div class = "win-loss-container">
           <div>
-          <h2>Correct: <span class="correct">0 </span> </h2>
-          <h2>Incorrect: <span class="incorrect">0</span></h2>
+          <h2 class="correct">Correct: 0</h2>
+          <h2 class="incorrect">Incorrect: 0</h2>
         </div>
           <button class="reset-button">Reset Score</button>
         
