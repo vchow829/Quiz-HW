@@ -1,29 +1,35 @@
 var startButton = document.querySelector(".start-button");
-var startQuizText = document.querySelector(".startQuiz")
+var startQuizText = document.querySelector(".startQuiz");
 var question1El = document.querySelector(".question1");
 var question2El = document.querySelector(".question2");
 var question3El = document.querySelector(".question3");
 var question4El = document.querySelector(".question4");
 
-var hideQuestion = document.querySelector(".questiontext")
-var squareBracket = document.querySelector(".squareB")
+
+var hideQuestion = document.querySelector(".questiontext");
+var hideQuestion2 = document.querySelector(".questiontext2");
+var hideQuestion3 = document.querySelector(".questiontext3");
+var hideQuestion4 = document.querySelector(".questiontext4");
+var squareBracketBtn = document.querySelector(".squareB");
+var cssBtn = document.querySelector(".cssans");
+var allBtn = document.querySelector(".allans");
 var correct = document.querySelector(".correct");
 var incorrect = document.querySelector(".incorrect");
 var timerElement = document.querySelector(".timer-count");
 
-
-
-
 startButton.addEventListener("click", function() {
-  if (hideQuestion.style.display, question1El.style.display === "none") {
-    hideQuestion.style.display, question1El.style.display = "block";
+  if (hideQuestion.style.display === "block" && question1El.style.display === "none") {
+    hideQuestion.style.display = "none"; 
+    question1El.style.display = "block";
   } else {
-    hideQuestion.style.display, question1El.style.display = "none";
+    hideQuestion.style.display = "block"; 
+    question1El.style.display = "none";
   }
+});
 
-  var timeLeft = 10
+var timeLeft = 10;
   
-    var timeInterval = setInterval(function () {
+var timeInterval = setInterval(function () {
     timeLeft--;
     timerElement.textContent = timeLeft;
     if (timeLeft >=0) {
@@ -32,98 +38,12 @@ startButton.addEventListener("click", function() {
       clearInterval(timeInterval);
       displayMessage ();
     }
-    }, 1000);
+}, 1000);
+
 
 function displayMessage() {
   timerElement.textContent = "Your time has run out";
-  }
-});
-
-startButton.addEventListener("click", function() {
-  if (hideQuestion.style.display, question2El.style.display === "none") {
-    hideQuestion.style.display, question2El.style.display = "block";
-  } else {
-    hideQuestion.style.display, question2El.style.display = "none";
-  }
-
-  var timeLeft = 10
-  
-    var timeInterval = setInterval(function () {
-    timeLeft--;
-    timerElement.textContent = timeLeft;
-    if (timeLeft >=0) {
-    }
-    if (timeLeft === 0) {
-      clearInterval(timeInterval);
-      displayMessage ();
-    }
-    }, 1000);
-
-function displayMessage() {
-  timerElement.textContent = "Your time has run out";
-  }
-});
-
-startButton.addEventListener("click", function() {
-  if (hideQuestion.style.display, question3El.style.display === "none") {
-    hideQuestion.style.display, question3El.style.display = "block";
-  } else {
-    hideQuestion.style.display, question3El.style.display = "none";
-  }
-
-  var timeLeft = 10
-  
-    var timeInterval = setInterval(function () {
-    timeLeft--;
-    timerElement.textContent = timeLeft;
-    if (timeLeft >=0) {
-    }
-    if (timeLeft === 0) {
-      clearInterval(timeInterval);
-      displayMessage ();
-    }
-    }, 1000);
-
-function displayMessage() {
-  timerElement.textContent = "Your time has run out";
-  }
-});
-
-startButton.addEventListener("click", function() {
-  if (hideQuestion.style.display, question4El.style.display === "none") {
-    hideQuestion.style.display, question4El.style.display = "block";
-  } else {
-    hideQuestion.style.display, question4El.style.display = "none";
-  }
-
-  var timeLeft = 10
-  
-    var timeInterval = setInterval(function () {
-    timeLeft--;
-    timerElement.textContent = timeLeft;
-    if (timeLeft >=0) {
-    }
-    if (timeLeft === 0) {
-      clearInterval(timeInterval);
-      displayMessage ();
-    }
-    }, 1000);
-
-function displayMessage() {
-  timerElement.textContent = "Your time has run out";
-  }
-});
-
-var correct = document.querySelector(".correct");
-var correctAns = 0
-var incorrectAns = 0
-
-squareBracket.addEventListener("click", function() {
-  if (squareBracket === true) {
-    correct.innerHTML = correctAns++;
-  } else {incorrectAns++};
-});
-
+};
 
 // Updates win count on screen and sets win count to client storage
 function correct() {
@@ -164,5 +84,4 @@ function resetGame() {
   setLosses()
 }
 // Attaches event listener to button
-resetButton.addEventListener("click", resetGame);
-
+  resetButton.addEventListener("click", resetGame);
